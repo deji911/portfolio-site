@@ -1,0 +1,23 @@
+.about-section {
+    padding: 6rem 2rem;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+
+    .about-content {
+        max-width: 800px;
+        margin: auto;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0d1b2a;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+    }
+}
