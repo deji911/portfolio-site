@@ -1,0 +1,66 @@
+.contact-section {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input,
+        textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        button {
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background: #0056b3;
+            }
+        }
+    }
+
+    /* 👇 Social links with round buttons */
+    .social-links {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            /* optional: makes them circular if your images are square */
+            transition: transform 0.3s;
+            background: transparent;
+            object-fit: contain;
+            padding: 15px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+}
