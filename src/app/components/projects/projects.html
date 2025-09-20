@@ -2,10 +2,26 @@
     <div class="projects-content">
         <h2>My Projects</h2>
         <div class="projects-grid">
-            <div class="project-card" *ngFor="let project of projects">
+            <div *ngFor="let project of projects" class="project-card">
                 <h3>{{ project.title }}</h3>
                 <p>{{ project.description }}</p>
-                <a [href]="project.link" target="_blank" class="project-link">View Project</a>
+
+                <div class="project-buttons">
+                    <!-- Download APK -->
+                    <a *ngIf="project.link" [href]="project.link" target="_blank">
+                        <button class="download-btn">Download APK</button>
+                    </a>
+
+                    <!-- Watch Demo toggle -->
+                    <button *ngIf="project.demo" class="demo-btn" (click)="project.showDemo = !project.showDemo">
+                        {{ project.showDemo ? 'Hide Demo' : 'Watch Demo' }}
+                    </button>
+                </div>
+
+                <!-- Embedded video (safe guard against undefined) -->
+                <div *ngIf="project.showDemo && project.demo" class="video-container">
+                    <iframe [src]="project.demo | safeUrl" width="640" height="480" allow="autoplay"></iframe>
+                </div>
             </div>
         </div>
     </div>
